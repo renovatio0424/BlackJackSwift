@@ -49,11 +49,11 @@ struct BlackJackGame {
         print("카드를 받으시겠습니다. (Y/N)")
         let answer = readLine()
         
-        if(answer == nil) {
+        if answer == nil {
             return false
         }
         
-        if(answer == "Y") {
+        if answer == "Y" {
             return true
         } else {
             return false
@@ -72,7 +72,7 @@ struct BlackJackGame {
             aiScore += aiCard.getRank().values.first
         }
         
-        if (21 > userScore && userScore > aiScore){
+        if (21 >= userScore && userScore > aiScore){
             return true
         }
         
